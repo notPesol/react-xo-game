@@ -1,15 +1,11 @@
+import Square from "./Square";
+
 function Board({ squares, handleClick }) {
     return (
         <div className="board">
             {squares.map((value, index) => {
                 return (
-                    <div
-                        key={index}
-                        className="square"
-                        onClick={() => handleClick(index)}
-                    >
-                        {value}
-                    </div>
+                    <Square key={index} value={value} onClick={() => handleClick(index)} />
                 )
             })}
         </div>
